@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-image: url("media/art/background.jpg");
+    background-color: rgba(255,255,255,255);
+}
+
+/* NAVIGATION BAR */
+
+.nav{
+    background-color: rgba(255,255,255);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    justify-content:center;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+} 
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-betw;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li{
+    height: 50%;
+    color: black;
+    list-style-type: none;
+    text-align: center;
+    font-size: 3vw;
+}
+
+
+/* GALLERY */
+
+.gallery{
+    position: relative;
+    width: 75%;
+    left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    /* height of the nav bar */
+}
+
+.container {
+    /* 100% / number of images in a row */
+    width: 33.333%; 
+    padding-bottom: 33.333%;
+    position: relative;
+    transition: transform 1000ms;
+    display: block;
+}
+
+.container img{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* .row .container:focus,
+.row .container:hover{
+    z-index: 1;
+} */
+
+.info{
+    background-color: black;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%,0%) rotateY(-90deg);
+    text-align: center;
+    /* this does not fix issue */
+    /* padding-top: 45%;  */
+
+}
+
+.container:hover .info{
+    opacity: .5;
+    transform: rotate(0deg);
+}
+
+.text{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 3vw;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: white;
+    display:none;
+    justify-content: center;
+    position:relative;
+    bottom: 0;
+    padding: 30px;
+    width: 80%;
+    z-index: 2;
+    left: 20%;
+}
+
